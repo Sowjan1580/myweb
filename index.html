@@ -4,22 +4,30 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-        $('.image-slider').slick({
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    });
-</script>
+   <style>
+        .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        .scrolling-wrapper img {
+            width: 300px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        /* Optional: Hide scrollbar */
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scrolling-wrapper {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+
 
 
     <title>Professional Homepage</title>
@@ -118,14 +126,13 @@
         <section id="hero" class="content">
             <h1>Welcome to My Professional Homepage</h1>
             <p>My name is Sowjan Jeejula, and I recently graduated with a B.Tech in Mechanical Engineering from RGUKT Basar. As an aspiring developer, I embarked on a unique project: building a webpage powered entirely by artificial intelligence.</p>
-            <div class="image-slider">
-    <div><img src="bard.jfif" alt="Image 1"></div>
-    <div><img src="bard2.jfif" alt="Image 2"></div>
-    <div><img src="blackbox.jfif" alt="Image 3"></div>
-    <div><img src="chatgpt.jfif" alt="Image 4"></div>
-                <div><img src="copilot.jfif" alt="Image 4"></div>
-                <div><img src="gpt.jfif" alt="Image 4"></div>
-</div>
+           <div class="scrolling-wrapper">
+        <img src="bard.jfif" alt="Image 1">
+        <img src="bard2.jfif" alt="Image 2">
+        <img src="blackbox.jfif" alt="Image 3">
+        <img src="chatgpt.jfif" alt="Image 4">
+        <img src="copilot.jfif" alt="Image 5">
+    </div>
 
 
             <div class="journey">
