@@ -40,10 +40,10 @@
         .parallax {
             background-image: url('https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg');
             height: 300px; /* Adjust height for mobile */
-            background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-color: #000; /* Default color for background if image is not loaded */
         }
 
         .content {
@@ -60,7 +60,6 @@
 
         @media screen and (max-width: 768px) {
             .parallax {
-                background-attachment: scroll; /* Disable parallax effect on mobile */
                 height: 200px; /* Adjust height for smaller screens */
             }
 
