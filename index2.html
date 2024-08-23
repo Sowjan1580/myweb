@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,6 @@
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
-            text-align: center;
             background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black background */
             overflow-x: hidden;
         }
@@ -33,6 +31,7 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
+            text-align: left; /* Align text to the left */
         }
 
         .content.show {
@@ -63,18 +62,23 @@
             line-height: 1.6;
             margin-bottom: 20px;
             color: #dcdcdc;
-            text-align: justify;
+            text-align: left; /* Align text to the left */
         }
 
         ul {
-            text-align: justify;
-            margin: 0 auto;
-            max-width: 800px;
+            text-align: left; /* Align text to the left */
+            margin: 0;
+            padding: 0;
+            list-style-position: inside;
             color: #dcdcdc;
         }
 
         li {
             margin-bottom: 10px;
+        }
+
+        .options {
+            text-align: left; /* Align button options to the left */
         }
 
         .options button {
@@ -100,6 +104,7 @@
             margin-top: 30px;
             font-size: 1.5em;
             min-height: 30px;
+            text-align: left; /* Align result text to the left */
         }
     </style>
 </head>
@@ -170,7 +175,7 @@
 
         <h2>Conclusion</h2>
         <p>While AI is poised to replace certain jobs, it will also create new opportunities and transform many existing roles. The challenge lies in managing this transition effectively, ensuring that the benefits of AI are widely shared, and mitigating the risks of job displacement and economic inequality. Adaptation through education, policy, and societal change will be key to navigating the impact of AI on jobs.</p>
-
+        
         <h2>Will AI Replace IT Jobs?</h2>
         <h3>The Evolution of AI in the IT Sector</h3>
         <p>
@@ -186,9 +191,9 @@
             obsolete.
         </p>
         <h3>Your Opinion Matters</h3>
-
-           <p>                                              We would like to know your thoughts on this important topic. Please cast your vote below: </p>
-       
+        <p>
+            We would like to know your thoughts on this important topic. Please cast your vote below:
+        </p>
         <div class="options">
             <button id="yesBtn">Yes, AI will replace IT jobs</button>
             <button id="noBtn">No, AI will not replace IT jobs</button>
