@@ -1,109 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-       body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black background */
-    overflow-x: hidden;
-}
+    <title>Homepage</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black background */
+            overflow-x: hidden;
+        }
 
         .parallax {
-    background-image: url('https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg');
-    height: 300px; /* Reduce height for mobile */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+            background-image: url('https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg');
+            height: 300px; /* Reduce height for mobile */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
         .content {
-    padding: 5%; /* Use percentage for padding */
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 20px auto; /* Center content with auto margins */
-    max-width: 100%; /* Ensure content does not exceed screen width */
-    border-radius: 10px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    text-align: left;
-}
-        @media screen and (max-width: 768px) {
-    .parallax {
-        background-attachment: scroll; /* Disable parallax effect on mobile */
-        height: 200px; /* Adjust height for smaller screens */
-    }
+            padding: 5%; /* Use percentage for padding */
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 90%; /* Ensure content does not exceed screen width */
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            text-align: left;
+        }
 
-    .content {
-        padding: 10px; /* Reduce padding on smaller screens */
-        margin: 10px; /* Adjust margin */
-    }
-
-    h1 {
-        font-size: 2em; /* Reduce font size for headers */
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    .options button {
-        font-size: 1em; /* Adjust button size */
-        padding: 10px 20px;
-    }
-
-    .result {
-        font-size: 1.2em;
-    }
-}
         .scrolling-wrapper {
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
         }
-        
+
         .scrolling-wrapper img {
-            width: 300px;
+            width: 100%; /* Make images flexible */
+            max-width: 300px; /* Cap the maximum width */
             margin-right: 10px;
             flex-shrink: 0;
         }
-        
+
         /* Optional: Hide scrollbar */
         .scrolling-wrapper::-webkit-scrollbar {
             display: none;
         }
-        
+
         .scrolling-wrapper {
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
         }
-    </style>
 
+        /* Media query for devices with max width of 768px (tablets and phones) */
+        @media screen and (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll; /* Disable parallax effect on mobile */
+                height: 200px; /* Adjust height for smaller screens */
+            }
 
+            .content {
+                padding: 10px; /* Reduce padding on smaller screens */
+                margin: 10px; /* Adjust margin */
+            }
 
-    <title>Homepage</title>
-    <style>
-        /* Add this CSS to your style.css file or keep it here for now */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            text-align: center; /* Center the content horizontally */
+            h1 {
+                font-size: 2em; /* Reduce font size for headers */
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .options button {
+                font-size: 1em; /* Adjust button size */
+                padding: 10px 20px;
+            }
+
+            .result {
+                font-size: 1.2em;
+            }
         }
+
         header {
             background-color: #f4f4f4;
             padding: 10px;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
@@ -111,37 +104,43 @@
             display: flex;
             justify-content: center;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: #333;
         }
+
         main {
             padding: 20px;
         }
+
         h1, h2 {
             margin: 0 0 20px 0;
         }
-        .content {
-            display: inline-block;
-            text-align: justify; /* Justify text */
-            max-width: 800px; /* Optional: sets a maximum width for readability */
-            width: 100%;
+
+        .journey h3 {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: left; /* Ensure subheadings are left-aligned within the centered content */
         }
-        p {
-            margin: 0 0 20px 0;
+
+        .journey p {
+            margin: 10px 0;
         }
-        #hero {
-            margin-bottom: 40px;
+
+        .journey ul {
+            list-style-type: none;
+            padding: 0;
         }
-        #about, #myskills, #contact {
-            margin-bottom: 40px;
+
+        .journey ul li {
+            margin: 5px 0;
         }
-        #myskills div, #contact div {
-            margin-bottom: 10px;
-        }
+
         a.btn {
             display: inline-block;
             padding: 10px 20px;
@@ -150,26 +149,17 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         a.btn:hover {
             background-color: #0056b3;
         }
-        .journey {
+
+        #about, #myskills, #contact {
             margin-bottom: 40px;
         }
-        .journey h3 {
-            margin-top: 20px;
-            font-size: 1.2em;
-            text-align: left; /* Ensure subheadings are left-aligned within the centered content */
-        }
-        .journey p {
-            margin: 10px 0;
-        }
-        .journey ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .journey ul li {
-            margin: 5px 0;
+
+        #myskills div, #contact div {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -187,49 +177,48 @@
         <section id="hero" class="content">
             <h1>Welcome to My Homepage</h1>
             <p>My name is Sowjan Jeejula, and I recently graduated with a B.Tech in Mechanical Engineering from RGUKT Basar. As an aspiring developer, I embarked on a unique project: building a webpage powered entirely by artificial intelligence.</p>
-           <div class="scrolling-wrapper">
-        <img src="bard.jfif" alt="Image 1">
-        <img src="bard2.jfif" alt="Image 2">
-        <img src="blackbox.jfif" alt="Image 3">
-        <img src="chatgpt.jfif" alt="Image 4">
-        <img src="copilot.jfif" alt="Image 5">
-        <img src="gpt.jfif" alt="Image 5">
-    </div>
-
+            <div class="scrolling-wrapper">
+                <img src="bard.jfif" alt="Image 1">
+                <img src="bard2.jfif" alt="Image 2">
+                <img src="blackbox.jfif" alt="Image 3">
+                <img src="chatgpt.jfif" alt="Image 4">
+                <img src="copilot.jfif" alt="Image 5">
+                <img src="gpt.jfif" alt="Image 6">
+            </div>
 
             <div class="journey">
                 <h2>The Journey:</h2>
                 <h3>Conceptualization</h3>
                 <p>I envisioned a platform where AI could dynamically generate content. The idea was to create a dynamic webpage that adapts to user interactions.</p>
-                
+
                 <h3>Tool Selection</h3>
                 <p>To achieve this, I leveraged cutting-edge AI models like ChatGPT and Copilot. These models excel in natural language understanding and code generation.</p>
-                
+
                 <h3>Prompt Engineering</h3>
                 <p>Crafting precise prompts became crucial. By carefully structuring my requests to the AI, I could control the quality and relevance of the generated content.</p>
-                
+
                 <h3>Iterative Development</h3>
                 <p>The journey involved continuous fine-tuning and testing. I iterated on both the AI models and the user interface to improve content quality and responsiveness.</p>
-                
+
                 <h3>User Interaction</h3>
                 <p>Visitors to my webpage now engage with AI-generated content. Whether it’s dynamically generated articles, personalized recommendations, or interactive elements, the experience is dynamic and captivating.</p>
-                
+
                 <h3>Challenges and Future Prospects:</h3>
                 <p>Context Coherence: Ensuring that AI responses remain contextually coherent was a challenge. Balancing creativity with accuracy required thoughtful adjustments.</p>
-                
+
                 <p>Accuracy and Relevance: Striking the right balance between creative output and factual accuracy was another hurdle. As AI evolves, addressing this will be crucial.</p>
-                
+
                 <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
             </div>
-            
-            <a href="#about" class="btn">Learn More</a>
-            
 
+            <a href="#about" class="btn">Learn More</a>
         </section>
+
         <article id="about" class="content">
             <h2>About Me</h2>
             <p>My name is Sowjan Jeejula, and I am a recent graduate from RGUKT Basar (IIIT Basar) with a Bachelor's degree in Mechanical Engineering. I have a solid foundation in technical skills, including proficiency in Python, Java, SQL, and HTML. I am actively seeking opportunities to apply and further develop my skills in the technical engineering field. My goal is to find a platform where I can leverage my knowledge to tackle challenging problems, contribute to innovative projects, and advance my career. I am eager to grow professionally and make meaningful contributions to a dynamic team.</p>
         </article>
+
         <article id="myskills" class="content">
             <h2>My Skills</h2>
             <div>HTML/CSS</div>
@@ -237,6 +226,7 @@
             <div>Python</div>
             <div>SQL</div>
         </article>
+
         <article id="contact" class="content">
             <h2>Contact Me</h2>
             <p>Get in touch with me through:</p>
@@ -245,7 +235,6 @@
             <div>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></div>
             <button onclick="window.location.href='index2.html'">Next</button>
         </article>
-        
     </main>
     <script src="script.js"></script>
 </body>
