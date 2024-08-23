@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI and IT Jobs Voting</title>
+    <title>Will AI Replace IT Jobs? - Professional Survey</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             text-align: center;
             background-color: #000;
@@ -24,15 +24,35 @@
         }
 
         .content {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
             margin: 20px;
             border-radius: 10px;
         }
 
         h1 {
             font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2em;
             margin-bottom: 20px;
+            color: #1e90ff;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #00bfff;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #dcdcdc;
         }
 
         .options button {
@@ -66,10 +86,28 @@
     <div class="parallax"></div>
 
     <div class="content">
-        <h1>Will AI replace the IT jobs?</h1>
+        <h1>Artificial Intelligence & The Future of IT Jobs</h1>
+        <h2>Will AI Replace IT Jobs?</h2>
+        <h3>The Evolution of AI in the IT Sector</h3>
+        <p>
+            Artificial Intelligence (AI) has been rapidly advancing, bringing both opportunities and challenges 
+            across various industries. In the IT sector, AI is being integrated into tasks that traditionally 
+            required human intervention, such as software development, network management, and data analysis.
+        </p>
+        <h3>The Debate: Automation vs. Human Expertise</h3>
+        <p>
+            While AI can enhance productivity and reduce human error, there is an ongoing debate about whether 
+            it will ultimately replace IT jobs. Some believe that AI will automate routine tasks, freeing up IT 
+            professionals to focus on more strategic work, while others fear that AI could make certain roles 
+            obsolete.
+        </p>
+        <h3>Your Opinion Matters</h3>
+        <p>
+            We would like to know your thoughts on this important topic. Please cast your vote below:
+        </p>
         <div class="options">
-            <button id="yesBtn">Yes</button>
-            <button id="noBtn">No</button>
+            <button id="yesBtn">Yes, AI will replace IT jobs</button>
+            <button id="noBtn">No, AI will not replace IT jobs</button>
         </div>
         <div id="result" class="result"></div>
     </div>
