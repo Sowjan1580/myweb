@@ -116,6 +116,24 @@ a.btn:hover {
 .fade-in.show {
     opacity: 1;
 }
+/* Add to style.css or within <style> in HTML */
+
+/* Initial state before the element is visible */
+main > section, main > article {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Fade-in effect when the element is visible */
+.fade-in {
+    opacity: 1;
+}
+
+/* Fade-out effect when the element is not visible */
+.fade-out {
+    opacity: 0;
+}
+
 
 
 /* Responsive design */
