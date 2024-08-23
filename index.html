@@ -1,251 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            background-color: #000;
-            overflow-x: hidden;
-        }
-
-        header {
-            background-color: #111;
-            padding: 10px;
-            color: #fff;
-            border-bottom: 2px solid #333;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        .content {
-            padding: 5%;
-            background-color: #222;
-            color: #fff;
-            margin: 20px auto;
-            max-width: 90%;
-            border: 1px solid #444;
-            border-radius: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            text-align: left;
-        }
-
-        @media screen and (max-width: 768px) {
-            .content {
-                padding: 10px;
-                margin: 10px;
-                max-width: 100%;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            p {
-                font-size: 1em;
-            }
-
-            .options button {
-                font-size: 1em;
-                padding: 10px 20px;
-            }
-
-            .result {
-                font-size: 1.2em;
-            }
-        }
-
-        .scrolling-wrapper {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            margin: 20px 0;
-        }
-
-        .scrolling-wrapper img {
-            width: 300px;
-            margin-right: 10px;
-            flex-shrink: 0;
-            border: 1px solid #444;
-        }
-
-        .scrolling-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrolling-wrapper {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        #hero, .journey, #about, #myskills, #contact {
-            background-color: #222;
-        }
-
-        footer {
-            background-color: #111;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            border-top: 2px solid #333;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        a.btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        a.btn:hover {
-            background-color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <style>
+    /* ... rest   
+ of the CSS ... */
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#myskills">My Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="hero" class="content">
-            <h1>Welcome to My Homepage</h1>
-            <p>My name is Sowjan Jeejula, and I recently graduated with a B.Tech in Mechanical Engineering from RGUKT Basar. As an aspiring developer, I embarked on a unique project: building a webpage powered entirely by artificial intelligence.</p>
-            <div class="scrolling-wrapper">
-                <img src="bard.jfif" alt="Image of Bard">
-                <img src="bard2.jfif" alt="Image of Bard 2">
-                <img src="blackbox.jfif" alt="Image of Black Box">
-                <img src="chatgpt.jfif" alt="Image of ChatGPT">
-                <img src="copilot.jfif" alt="Image of Copilot">
-                <img src="gpt.jfif" alt="Image of GPT">
-            </div>
-            <div class="journey">
-                <h2>The Journey:</h2>
-                <h3>Conceptualization</h3>
-                <p>I envisioned a platform where AI could dynamically generate content. The idea was to create a dynamic webpage that adapts to user interactions.</p>
-                
-                <h3>Tool Selection</h3>
-                <p>To achieve this, I leveraged cutting-edge AI models like ChatGPT and Copilot. These models excel in natural language understanding and code generation.</p>
-                
-                <h3>Prompt Engineering</h3>
-                <p>Crafting precise prompts became crucial. By carefully structuring my requests to the AI, I could control the quality and relevance of the generated content.</p>
-                
-                <h3>Iterative Development</h3>
-                <p>The journey involved continuous fine-tuning and testing. I iterated on both the AI models and the user interface to improve content quality and responsiveness.</p>
-                
-                <h3>User Interaction</h3>
-                <p>Visitors to my webpage now engage with AI-generated content. Whether it’s dynamically generated articles, personalized recommendations, or interactive elements, the experience is dynamic and captivating.</p>
-                
-                <h3>Challenges and Future Prospects:</h3>
-                <p>Context Coherence: Ensuring that AI responses remain contextually coherent was a challenge. Balancing creativity with accuracy required thoughtful adjustments.</p>
-                
-                <p>Accuracy and Relevance: Striking the right balance between creative output and factual accuracy was another hurdle. As AI evolves, addressing this will be crucial.</p>
-                
-                <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
-            </div>
-            <a href="#about" class="btn">Learn More</a>
-        </section>
-        <article id="about" class="content">
-            <h2>About Me</h2>
-            <p>My name is Sowjan Jeejula, and I am a recent graduate from RGUKT Basar (IIIT Basar) with a Bachelor's degree in Mechanical Engineering. I have a solid foundation in technical skills, including proficiency in Python, Java, SQL, and HTML. I am actively seeking opportunities to apply and further develop my skills in the technical engineering field. My goal is to find a platform where I can leverage my knowledge to tackle challenging problems, contribute to innovative projects, and advance my career. I am eager to grow professionally and make meaningful contributions to a dynamic team.</p>
-        </article>
-        <article id="myskills" class="content">
-            <h2>My Skills</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>SQL</li>
-            </ul>
-        </article>
-        <article id="contact" class="content">
-            <h2>Contact Me</h2>
-            <p>Get in touch with me through:</p>
-            <ul>
-                <li>Email: <a href="mailto:sowjankumarjeejula@gmail.com">sowjankumarjeejula@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/">Sowjan Kumar Jeejula</a></li>
-                <li>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></li>
-            </ul>
-            <button onclick="window.location.href='index2.html'">Next</button>
-        </article>
-    </main>
-    <script>
-        function fadeInOnScroll() {
-            const sections = document.querySelectorAll('.content');
-            const windowHeight = window.innerHeight;
-            const offset = 100; // Adjust based on preference
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#myskills">My Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="content">
+      <h1>Welcome to My Homepage</h1>
+      <p>My name is Sowjan Jeejula, and I recently graduated with a B.Tech in Mechanical Engineering from RGUKT Basar. As an aspiring developer, I embarked on a unique project: building a webpage powered entirely by artificial intelligence.</p>
+      <div class="scrolling-wrapper">
+        <img src="bard.jfif" alt="Image of Bard">
+        <img src="bard2.jfif" alt="Image of Bard 2">
+        <img src="blackbox.jfif" alt="Image of Black Box">
+        <img src="chatgpt.jfif" alt="Image of ChatGPT">
+        <img src="copilot.jfif" alt="Image of Copilot">
+        <img src="gpt.jfif" alt="Image of GPT">
+      </div>
+      <div class="journey">
+        <h2>The Journey:</h2>
+        <h3>Conceptualization</h3>
+        <p>I envisioned a platform where AI could dynamically generate content. The idea was to create a dynamic webpage that adapts to user interactions.</p>
+        <h3>Tool Selection</h3>
+        <p>To achieve this, I leveraged cutting-edge AI models like ChatGPT and Copilot. These models excel in natural language understanding and code generation.</p>
+        <h3>Prompt Engineering</h3>
+        <p>Crafting precise prompts became crucial. By carefully structuring my requests to the AI, I could control the quality and relevance of the generated content.</p>
+        <h3>Iterative Development</h3>
+        <p>The journey involved continuous fine-tuning and testing. I iterated on both the AI models and the user interface to improve content quality and responsiveness.</p>
+        <h3>User Interaction</h3>
+        <p>Visitors to my webpage now engage with AI-generated content. Whether it’s dynamically generated articles, personalized recommendations, or interactive elements, the experience is dynamic and captivating.</p>
+        <h3>Challenges and Future Prospects:</h3>
+        <p>Context Coherence: Ensuring that AI responses remain contextually coherent was a challenge. Balancing creativity with accuracy required thoughtful adjustments.</p>
+        <p>Accuracy and Relevance: Striking the right balance between creative output and factual accuracy was another hurdle. As AI evolves, addressing this will be crucial.</p>
+        <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
+      </div>
+      <a href="#about" class="btn">Learn More</a>
+    </section>
+    <article id="about" class="content">
+      <h2>About Me</h2>
+      <p>My name is Sowjan Jeejula, and I am a recent graduate from RGUKT Basar (IIIT Basar) with a Bachelor's degree in Mechanical Engineering. I have a solid foundation in technical skills, including proficiency in Python, Java, SQL, and HTML. I am actively seeking opportunities to apply and further develop my skills in the technical engineering field. My goal is to find a platform where I can leverage my knowledge to tackle challenging problems, contribute to innovative projects, and advance my career. I am eager to grow professionally and make meaningful contributions to a dynamic team.</p>
+    </article>
+    <article id="myskills" class="content">
+      <h2>My Skills</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>SQL</li>
+      </ul>
+    </article>
+    <article id="contact" class="content">
+      <h2>Contact Me</h2>
+      <p>Get in touch with me through:</p>
+      <ul>
+        <li>Email: <a href="mailto:sowjankumarjeejula@gmail.com">sowjankumarjeejula@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/">Sowjan Kumar Jeejula</a></li>
+        <li>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></li>
+      </ul>
+      <button onclick="window.location.href='index2.html'">Next</button>
+    </article>
+  </main>
+  <script>
+    function fadeInOnScroll() {
+      const sections = document.querySelectorAll('.content');
+      const windowHeight = window.innerHeight;
+      const offset = 100; // Adjust based on preference
 
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const isVisible = sectionTop < windowHeight - offset;
-                if (isVisible) {
-                    section.style.opacity = 1;
-                    section.style.transform = 'translateY(0)';
-                } else {
-                    section.style.opacity = 0;
-                    section.style.transform = 'translateY(20px)';
-                }
-            });
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isVisible = sectionTop < windowHeight - offset;
+        if (isVisible) {
+          section.style.opacity = 1;
+          section.style.transform = 'translateY(0)';
+        } else {
+          section.style.opacity = 0;
+          section.style.transform   
+ = 'translateY(20px)';
         }
+      });
+    }
 
-        window.addEventListener('scroll', debounce(fadeInOnScroll, 50));
-        window.addEventListener('load', fadeInOnScroll); // Ensure fade-in effect on initial load
+    window.addEventListener('scroll', debounce(fadeInOnScroll, 50));
+    window.addEventListener('load', fadeInOnScroll); // Ensure fade-in effect on initial load
 
-        // Debounce function to limit how often fadeInOnScroll is called
-        function debounce(func, wait) {
-            let timeout;
-            return function(...args) {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => func.apply(this, args), wait);
-            };
-        }
-    </script>
+    // Debounce function to limit how often fadeInOnScroll is called
+    function debounce(func, wait) {
+      let timeout;
+      return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+  </script>   
+
 </body>
 </html>
