@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
   <style>
+    /* Styles */
     body, html {
       height: 100%;
       margin: 0;
@@ -39,8 +40,12 @@
       font-weight: bold;
     }
 
+    main {
+      padding: 20px;
+    }
+
     .content {
-      padding: 5%;
+      padding: 20px;
       background-color: #222;
       color: #fff;
       margin: 20px auto;
@@ -50,36 +55,6 @@
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease-out, transform 1s ease-out;
-      text-align: left;
-    }
-
-    @media screen and (max-width: 768px) {
-      .content {
-        padding: 10px;
-        margin: 10px;
-        max-width: 100%;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.5em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-
-      .options button {
-        font-size: 1em;
-        padding: 10px 20px;
-      }
-
-      .result {
-        font-size: 1.2em;
-      }
     }
 
     .scrolling-wrapper {
@@ -107,19 +82,6 @@
       scrollbar-width: none;
     }
 
-    #hero, .journey, #about, #myskills, #contact {
-      background-color: #222;
-      border: 1px solid #444;
-    }
-
-    footer {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      border-top: 2px solid #333;
-    }
-
     button {
       background-color: #333;
       color: #fff;
@@ -127,6 +89,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      margin-top: 20px;
     }
 
     button:hover {
@@ -169,30 +132,13 @@
         <img src="copilot.jfif" alt="Image of Copilot">
         <img src="gpt.jfif" alt="Image of GPT">
       </div>
-      <div class="journey content">
-        <h2>The Journey:</h2>
-        <h3>Conceptualization</h3>
-        <p>I envisioned a platform where AI could dynamically generate content. The idea was to create a dynamic webpage that adapts to user interactions.</p>
-        <h3>Tool Selection</h3>
-        <p>To achieve this, I leveraged cutting-edge AI models like ChatGPT and Copilot. These models excel in natural language understanding and code generation.</p>
-        <h3>Prompt Engineering</h3>
-        <p>Crafting precise prompts became crucial. By carefully structuring my requests to the AI, I could control the quality and relevance of the generated content.</p>
-        <h3>Iterative Development</h3>
-        <p>The journey involved continuous fine-tuning and testing. I iterated on both the AI models and the user interface to improve content quality and responsiveness.</p>
-        <h3>User Interaction</h3>
-        <p>Visitors to my webpage now engage with AI-generated content. Whether it’s dynamically generated articles, personalized recommendations, or interactive elements, the experience is dynamic and captivating.</p>
-        <h3>Challenges and Future Prospects:</h3>
-        <p>Context Coherence: Ensuring that AI responses remain contextually coherent was a challenge. Balancing creativity with accuracy required thoughtful adjustments.</p>
-        <p>Accuracy and Relevance: Striking the right balance between creative output and factual accuracy was another hurdle. As AI evolves, addressing this will be crucial.</p>
-        <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
-      </div>
       <a href="#about" class="btn">Learn More</a>
     </section>
-    <article id="about" class="content">
+    <section id="about" class="content">
       <h2>About Me</h2>
       <p>My name is Sowjan Jeejula, and I am a recent graduate from RGUKT Basar (IIIT Basar) with a Bachelor's degree in Mechanical Engineering. I have a solid foundation in technical skills, including proficiency in Python, Java, SQL, and HTML. I am actively seeking opportunities to apply and further develop my skills in the technical engineering field. My goal is to find a platform where I can leverage my knowledge to tackle challenging problems, contribute to innovative projects, and advance my career. I am eager to grow professionally and make meaningful contributions to a dynamic team.</p>
-    </article>
-    <article id="myskills" class="content">
+    </section>
+    <section id="myskills" class="content">
       <h2>My Skills</h2>
       <ul>
         <li>HTML/CSS</li>
@@ -200,8 +146,8 @@
         <li>Python</li>
         <li>SQL</li>
       </ul>
-    </article>
-    <article id="contact" class="content">
+    </section>
+    <section id="contact" class="content">
       <h2>Contact Me</h2>
       <p>Get in touch with me through:</p>
       <ul>
@@ -210,7 +156,7 @@
         <li>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></li>
       </ul>
       <button onclick="window.location.href='index2.html'">Next</button>
-    </article>
+    </section>
   </main>
   <script>
     function fadeInOnScroll() {
