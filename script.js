@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
-                entry.target.classList.remove('fade-out');
-            } else {
-                entry.target.classList.remove('fade-in');
-                entry.target.classList.add('fade-out');
+                observer.unobserve(entry.target);  // Stop observing once it has faded in
             }
         });
     }, fadeOptions);
