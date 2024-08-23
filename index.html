@@ -9,16 +9,16 @@
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff; /* White text color */
-            background-color: #000; /* Black background color */
+            color: #fff;
+            background-color: #000;
             overflow-x: hidden;
         }
 
         header {
-            background-color: #111; /* Slightly lighter black for header */
+            background-color: #111;
             padding: 10px;
-            color: #fff; /* White text color */
-            border-bottom: 2px solid #333; /* Border at the bottom */
+            color: #fff;
+            border-bottom: 2px solid #333;
         }
 
         nav ul {
@@ -35,17 +35,17 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff; /* White text color */
+            color: #fff;
             font-weight: bold;
         }
 
         .content {
             padding: 5%;
-            background-color: #222; /* Dark background for content */
-            color: #fff; /* White text color */
-            margin: 20px auto; 
-            max-width: 90%; 
-            border: 1px solid #444; /* Border around each content section */
+            background-color: #222;
+            color: #fff;
+            margin: 20px auto;
+            max-width: 90%;
+            border: 1px solid #444;
             border-radius: 10px;
             opacity: 0;
             transform: translateY(20px);
@@ -54,15 +54,14 @@
         }
 
         @media screen and (max-width: 768px) {
-
             .content {
-                padding: 10px; 
-                margin: 10px; 
-                max-width: 100%; /* Full width on smaller screens */
+                padding: 10px;
+                margin: 10px;
+                max-width: 100%;
             }
 
             h1 {
-                font-size: 2em; 
+                font-size: 2em;
             }
 
             h2 {
@@ -74,7 +73,7 @@
             }
 
             .options button {
-                font-size: 1em; 
+                font-size: 1em;
                 padding: 10px 20px;
             }
 
@@ -89,46 +88,38 @@
             white-space: nowrap;
             margin: 20px 0;
         }
-        
+
         .scrolling-wrapper img {
             width: 300px;
             margin-right: 10px;
             flex-shrink: 0;
-            border: 1px solid #444; /* Border for images */
+            border: 1px solid #444;
         }
-        
+
         .scrolling-wrapper::-webkit-scrollbar {
             display: none;
         }
-        
+
         .scrolling-wrapper {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
 
-        #hero {
-            background-color: #222; /* Dark background for hero section */
-        }
-
-        .journey {
-            background-color: #222; /* Dark background for journey section */
-        }
-
-        #about, #myskills, #contact {
-            background-color: #222; /* Dark background for these sections */
+        #hero, .journey, #about, #myskills, #contact {
+            background-color: #222;
         }
 
         footer {
-            background-color: #111; /* Slightly lighter black for footer */
-            color: #fff; /* White text color */
+            background-color: #111;
+            color: #fff;
             text-align: center;
             padding: 10px;
-            border-top: 2px solid #333; /* Border at the top */
+            border-top: 2px solid #333;
         }
 
         button {
-            background-color: #333; /* Dark grey background for buttons */
-            color: #fff; /* White text color */
+            background-color: #333;
+            color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
@@ -136,20 +127,20 @@
         }
 
         button:hover {
-            background-color: #555; /* Darker grey on hover */
+            background-color: #555;
         }
 
         a.btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #333; /* Dark grey background for buttons */
-            color: #fff; /* White text color */
+            background-color: #333;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
         }
 
         a.btn:hover {
-            background-color: #555; /* Darker grey on hover */
+            background-color: #555;
         }
     </style>
 </head>
@@ -168,12 +159,12 @@
             <h1>Welcome to My Homepage</h1>
             <p>My name is Sowjan Jeejula, and I recently graduated with a B.Tech in Mechanical Engineering from RGUKT Basar. As an aspiring developer, I embarked on a unique project: building a webpage powered entirely by artificial intelligence.</p>
             <div class="scrolling-wrapper">
-                <img src="bard.jfif" alt="Image 1">
-                <img src="bard2.jfif" alt="Image 2">
-                <img src="blackbox.jfif" alt="Image 3">
-                <img src="chatgpt.jfif" alt="Image 4">
-                <img src="copilot.jfif" alt="Image 5">
-                <img src="gpt.jfif" alt="Image 6">
+                <img src="bard.jfif" alt="Image of Bard">
+                <img src="bard2.jfif" alt="Image of Bard 2">
+                <img src="blackbox.jfif" alt="Image of Black Box">
+                <img src="chatgpt.jfif" alt="Image of ChatGPT">
+                <img src="copilot.jfif" alt="Image of Copilot">
+                <img src="gpt.jfif" alt="Image of GPT">
             </div>
             <div class="journey">
                 <h2>The Journey:</h2>
@@ -207,17 +198,21 @@
         </article>
         <article id="myskills" class="content">
             <h2>My Skills</h2>
-            <div>HTML/CSS</div>
-            <div>Java</div>
-            <div>Python</div>
-            <div>SQL</div>
+            <ul>
+                <li>HTML/CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
         </article>
         <article id="contact" class="content">
             <h2>Contact Me</h2>
             <p>Get in touch with me through:</p>
-            <div>Email: <a href="mailto:sowjankumarjeejula@gmail.com">sowjankumarjeejula@gmail.com</a></div>
-            <div>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/">Sowjan Kumar Jeejula</a></div>
-            <div>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></div>
+            <ul>
+                <li>Email: <a href="mailto:sowjankumarjeejula@gmail.com">sowjankumarjeejula@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/">Sowjan Kumar Jeejula</a></li>
+                <li>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></li>
+            </ul>
             <button onclick="window.location.href='index2.html'">Next</button>
         </article>
     </main>
@@ -226,7 +221,7 @@
             const sections = document.querySelectorAll('.content');
             const windowHeight = window.innerHeight;
             const offset = 100; // Adjust based on preference
-            
+
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isVisible = sectionTop < windowHeight - offset;
@@ -240,8 +235,17 @@
             });
         }
 
-        window.addEventListener('scroll', fadeInOnScroll);
+        window.addEventListener('scroll', debounce(fadeInOnScroll, 50));
         window.addEventListener('load', fadeInOnScroll); // Ensure fade-in effect on initial load
+
+        // Debounce function to limit how often fadeInOnScroll is called
+        function debounce(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
     </script>
 </body>
 </html>
