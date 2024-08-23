@@ -1,3 +1,15 @@
+To make the background 50% transparent, you can set the `background-color` using the `rgba` function where the last parameter is the alpha (opacity) value. For 50% transparency, you should set this value to `0.5`.
+
+Here’s how you can apply 50% transparency to the background:
+
+### Example:
+```css
+background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black background */
+```
+
+### Applying this to the body and content:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +23,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Decreased opacity for a lighter background */
+            background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black background */
             overflow-x: hidden;
         }
 
@@ -26,7 +38,7 @@
 
         .content {
             padding: 40px;
-            background-color: rgba(0, 0, 0, 0.7); /* Decreased opacity for a lighter content background */
+            background-color: rgba(0, 0, 0, 0.5); /* 50% transparent content background */
             margin: 20px;
             border-radius: 10px;
             opacity: 0;
@@ -185,7 +197,9 @@
             obsolete.
         </p>
         <h3>Your Opinion Matters</h3>
-        <p>
+        <
+
+p>
             We would like to know your thoughts on this important topic. Please cast your vote below:
         </p>
         <div class="options">
@@ -228,3 +242,4 @@
 
 </body>
 </html>
+```
