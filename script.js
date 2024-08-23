@@ -6,10 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (learnMoreButton) {
         learnMoreButton.addEventListener('click', function() {
             alert('Thank you for your interest! More information is on the way.');
+            // Bounce effect on button click
+            this.classList.add('bounce');
+            setTimeout(() => {
+                this.classList.remove('bounce');
+            }, 1000); // Remove class after animation duration
         });
     }
 
-    // Example: Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links
     const links = document.querySelectorAll('nav ul li a');
     links.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -23,5 +28,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+
+    // Fade-in effect for sections when they come into view
+    const sections = document.querySelectorAll('main > section, main > article');
+    const fadeInOptions = {
+        threshold: 0.1
+    };
+    
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, fadeInOptions);
+
+    sections.forEach(section => {
+        fadeInObserver.observe(section);
     });
 });
