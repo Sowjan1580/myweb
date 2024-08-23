@@ -1,6 +1,3 @@
-Here's the complete code with the fade-in effect added while scrolling and text justified:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +11,7 @@ Here's the complete code with the fade-in effect added while scrolling and text 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
             text-align: center;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.9); /* Decreased opacity for a lighter background */
             overflow-x: hidden;
         }
 
@@ -29,7 +26,7 @@ Here's the complete code with the fade-in effect added while scrolling and text 
 
         .content {
             padding: 40px;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.7); /* Decreased opacity for a lighter content background */
             margin: 20px;
             border-radius: 10px;
             opacity: 0;
@@ -201,10 +198,7 @@ Here's the complete code with the fade-in effect added while scrolling and text 
     <div class="parallax"></div>
 
     <script>
-        // Fade-in effect on scroll
-        const contentSections = document.querySelectorAll
-
-('.content');
+        const contentSections = document.querySelectorAll('.content');
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -234,10 +228,3 @@ Here's the complete code with the fade-in effect added while scrolling and text 
 
 </body>
 </html>
-```
-
-### Explanation of the Changes:
-1. **Fade-In Effect**: The content sections will fade in as you scroll. This is achieved using `IntersectionObserver` to detect when elements come into view and then adding a class that triggers a CSS transition.
-2. **Text Justification**: The text in paragraphs and lists is now justified to improve readability and create a more professional appearance.
-
-This code will create a smooth scrolling experience with fade-in effects and better-formatted text.
