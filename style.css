@@ -90,6 +90,33 @@ a.btn:hover {
     color: #ffffff; /* White text on hover */
     border-color: #ffb6c1; /* Light pink border on hover */
 }
+/* Add to style.css or within <style> in HTML */
+
+.btn.bounce {
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
