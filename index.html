@@ -36,6 +36,7 @@
         nav ul li a {
             text-decoration: none;
             color: #fff; /* White text color */
+            font-weight: bold;
         }
 
         .content {
@@ -44,7 +45,7 @@
             color: #fff; /* White text color */
             margin: 20px auto; 
             max-width: 90%; 
-            border: 1px solid #333; /* Border around each content section */
+            border: 1px solid #444; /* Border around each content section */
             border-radius: 10px;
             opacity: 0;
             transform: translateY(20px);
@@ -86,12 +87,14 @@
             display: flex;
             overflow-x: auto;
             white-space: nowrap;
+            margin: 20px 0;
         }
         
         .scrolling-wrapper img {
             width: 300px;
             margin-right: 10px;
             flex-shrink: 0;
+            border: 1px solid #444; /* Border for images */
         }
         
         .scrolling-wrapper::-webkit-scrollbar {
