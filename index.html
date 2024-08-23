@@ -9,14 +9,15 @@
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white;
-            background-color: #1a1a1a; /* Dark grey background for the whole page */
+            color: #000;
+            background-color: #fff; /* Set background color to white */
             overflow-x: hidden;
         }
 
         header {
-            background-color: #111; /* Very dark grey for the header */
+            background-color: #000; /* Black background for header */
             padding: 10px;
+            color: #fff; /* White text color */
         }
 
         nav ul {
@@ -33,96 +34,43 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #f1f1f1; /* Light grey for links */
+            color: #fff; /* White text color */
         }
 
-        main {
-            padding: 20px;
+        .parallax {
+            background-image: url('https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg');
+            height: 300px; /* Adjust height for mobile */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .content {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            margin: 20px auto;
-            max-width: 90%;
+            padding: 5%;
+            background-color: #f8f8f8; /* Light grey background */
+            margin: 20px auto; 
+            max-width: 100%;
             border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
             text-align: left;
-            opacity: 0; /* Start as invisible */
-            transition: opacity 1s ease-in-out; /* Fade-in transition */
-        }
-
-        #hero {
-            background-color: #ff6f61; /* Vibrant coral for the hero section */
-        }
-
-        #about {
-            background-color: #6a1b9a; /* Deep purple for the about section */
-        }
-
-        #myskills {
-            background-color: #1e88e5; /* Bright blue for the skills section */
-        }
-
-        #contact {
-            background-color: #43a047; /* Fresh green for the contact section */
-        }
-
-        .scrolling-wrapper {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            margin: 20px 0;
-        }
-
-        .scrolling-wrapper img {
-            height: 150px;
-            margin-right: 10px;
-            flex-shrink: 0;
-        }
-
-        .scrolling-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrolling-wrapper {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        h1, h2 {
-            margin: 0 0 20px 0;
-        }
-
-        .journey h3 {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-
-        .journey p {
-            margin: 10px 0;
-        }
-
-        a.btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff; /* Blue background for buttons */
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        a.btn:hover {
-            background-color: #0056b3; /* Darker blue on hover */
         }
 
         @media screen and (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll; /* Disable parallax effect on mobile */
+                height: 200px; /* Adjust height for smaller screens */
+            }
+
             .content {
-                padding: 10px;
-                margin: 10px;
+                padding: 10px; 
+                margin: 10px; 
             }
 
             h1 {
-                font-size: 2em;
+                font-size: 2em; 
             }
 
             h2 {
@@ -133,10 +81,60 @@
                 font-size: 1em;
             }
 
-            .scrolling-wrapper img {
-                height: 100px; /* Adjust image height for smaller screens */
+            .options button {
+                font-size: 1em; 
+                padding: 10px 20px;
+            }
+
+            .result {
+                font-size: 1.2em;
             }
         }
+
+        .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        .scrolling-wrapper img {
+            width: 300px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scrolling-wrapper {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Additional Section Backgrounds */
+        #hero {
+            background-color: #000; /* Black background for hero section */
+            color: #fff; /* White text color */
+        }
+
+        .journey {
+            background-color: #f8f8f8; /* Light grey background */
+            color: #000; /* Black text color */
+        }
+
+        #about, #myskills, #contact {
+            background-color: #fff; /* White background */
+            color: #000; /* Black text color */
+        }
+
+        footer {
+            background-color: #000; /* Black background for footer */
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -159,42 +157,38 @@
                 <img src="blackbox.jfif" alt="Image 3">
                 <img src="chatgpt.jfif" alt="Image 4">
                 <img src="copilot.jfif" alt="Image 5">
-                <img src="gpt.jfif" alt="Image 6">
+                <img src="gpt.jfif" alt="Image 5">
             </div>
-
             <div class="journey">
                 <h2>The Journey:</h2>
                 <h3>Conceptualization</h3>
                 <p>I envisioned a platform where AI could dynamically generate content. The idea was to create a dynamic webpage that adapts to user interactions.</p>
-
+                
                 <h3>Tool Selection</h3>
                 <p>To achieve this, I leveraged cutting-edge AI models like ChatGPT and Copilot. These models excel in natural language understanding and code generation.</p>
-
+                
                 <h3>Prompt Engineering</h3>
                 <p>Crafting precise prompts became crucial. By carefully structuring my requests to the AI, I could control the quality and relevance of the generated content.</p>
-
+                
                 <h3>Iterative Development</h3>
                 <p>The journey involved continuous fine-tuning and testing. I iterated on both the AI models and the user interface to improve content quality and responsiveness.</p>
-
+                
                 <h3>User Interaction</h3>
                 <p>Visitors to my webpage now engage with AI-generated content. Whether it’s dynamically generated articles, personalized recommendations, or interactive elements, the experience is dynamic and captivating.</p>
-
+                
                 <h3>Challenges and Future Prospects:</h3>
                 <p>Context Coherence: Ensuring that AI responses remain contextually coherent was a challenge. Balancing creativity with accuracy required thoughtful adjustments.</p>
-
+                
                 <p>Accuracy and Relevance: Striking the right balance between creative output and factual accuracy was another hurdle. As AI evolves, addressing this will be crucial.</p>
-
+                
                 <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
             </div>
-
             <a href="#about" class="btn">Learn More</a>
         </section>
-
         <article id="about" class="content">
             <h2>About Me</h2>
             <p>My name is Sowjan Jeejula, and I am a recent graduate from RGUKT Basar (IIIT Basar) with a Bachelor's degree in Mechanical Engineering. I have a solid foundation in technical skills, including proficiency in Python, Java, SQL, and HTML. I am actively seeking opportunities to apply and further develop my skills in the technical engineering field. My goal is to find a platform where I can leverage my knowledge to tackle challenging problems, contribute to innovative projects, and advance my career. I am eager to grow professionally and make meaningful contributions to a dynamic team.</p>
         </article>
-
         <article id="myskills" class="content">
             <h2>My Skills</h2>
             <div>HTML/CSS</div>
@@ -202,7 +196,6 @@
             <div>Python</div>
             <div>SQL</div>
         </article>
-
         <article id="contact" class="content">
             <h2>Contact Me</h2>
             <p>Get in touch with me through:</p>
@@ -214,27 +207,22 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section, article');
+        function fadeInOnScroll() {
+            const sections = document.querySelectorAll('.content');
+            const windowHeight = window.innerHeight;
+            const offset = 200; // Offset for triggering fade-in
 
-            function fadeInOnScroll() {
-                const scrollPosition = window.scrollY + window.innerHeight;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < windowHeight - offset) {
+                    section.style.opacity = 1;
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        }
 
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-
-                    if (scrollPosition > sectionTop + sectionHeight / 3) {
-                        section.style.opacity = 1;
-                    } else {
-                        section.style.opacity = 0;
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', fadeInOnScroll);
-            fadeInOnScroll(); // Initial check
-        });
+        window.addEventListener('scroll', fadeInOnScroll);
+        fadeInOnScroll(); // Initial check
     </script>
 </body>
 </html>
