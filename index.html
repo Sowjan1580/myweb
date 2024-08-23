@@ -13,7 +13,13 @@
       color: #fff;
       background-color: #000;
       overflow-x: hidden;
-      opacity: 0; /* Initially hide the entire page */
+      opacity: 1; /* Ensure body starts with opacity 1 */
+      transition: opacity 1s ease-in-out; /* Fade-in effect */
+    }
+
+    /* Initial opacity set to 0 for body */
+    .fade-in {
+      opacity: 0;
       transition: opacity 1s ease-in-out; /* Fade-in effect */
     }
 
@@ -112,7 +118,7 @@
     }
   </style>
 </head>
-<body>
+<body class="fade-in">
   <header>
     <nav>
       <ul>
@@ -161,9 +167,9 @@
     </section>
   </main>
   <script>
-    // Function to fade in the content on page load
+    // Function to fade in the page content on load
     function fadeInPage() {
-      document.body.style.opacity = 1;
+      document.body.classList.remove('fade-in');
     }
 
     // Function to handle fade in on scroll
