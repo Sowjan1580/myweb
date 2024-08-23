@@ -130,7 +130,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',  # your app name
 ]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]',https://sowjan1580.github.io/myweb/s]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]','https://sowjan1580.github.io/myweb/']
 DEBUG=True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ROOT_URLCONF = 'myweb.urls'
