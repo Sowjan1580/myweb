@@ -10,53 +10,12 @@
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
-            background-color: rgba(0, 0, 0, 0.9); /* Darker background for better contrast */
+            background-color: #333; /* Default dark background */
             overflow-x: hidden;
         }
 
-        .parallax {
-            background-image: url('https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg');
-            height: 300px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .content {
-            padding: 20px; /* Padding for content */
-            background-color: rgba(0, 0, 0, 0.7);
-            margin: 20px auto;
-            max-width: 90%;
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .scrolling-wrapper {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            margin: 20px 0; /* Add some space above and below the scrolling images */
-        }
-
-        .scrolling-wrapper img {
-            height: 150px; /* Set a fixed height for the images */
-            margin-right: 10px;
-            flex-shrink: 0;
-        }
-
-        /* Hide scrollbar for better aesthetics */
-        .scrolling-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrolling-wrapper {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-
         header {
-            background-color: #444;
+            background-color: #444; /* Dark grey background for the header */
             padding: 10px;
         }
 
@@ -79,6 +38,53 @@
 
         main {
             padding: 20px;
+        }
+
+        #hero {
+            background-color: #222; /* Very dark background for the hero section */
+        }
+
+        #about {
+            background-color: #555; /* Medium grey for the about section */
+        }
+
+        #myskills {
+            background-color: #444; /* Slightly lighter grey for the skills section */
+        }
+
+        #contact {
+            background-color: #666; /* Light grey for the contact section */
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .scrolling-wrapper {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin: 20px 0;
+        }
+
+        .scrolling-wrapper img {
+            height: 150px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrolling-wrapper {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
         h1, h2 {
@@ -105,10 +111,6 @@
 
         a.btn:hover {
             background-color: #0056b3;
-        }
-
-        #about, #myskills, #contact {
-            margin-bottom: 40px;
         }
 
         @media screen and (max-width: 768px) {
@@ -209,5 +211,15 @@
             <button onclick="window.location.href='index2.html'">Next</button>
         </article>
     </main>
+
+    <script>
+        // JavaScript to dynamically change the background color of the sections
+        const sections = document.querySelectorAll('section, article');
+        const colors = ['#222', '#555', '#444', '#666']; // Array of colors for each section
+
+        sections.forEach((section, index) => {
+            section.style.backgroundColor = colors[index % colors.length];
+        });
+    </script>
 </body>
 </html>
