@@ -50,7 +50,7 @@
             padding: 5%;
             background-color: #444; /* Dark grey background for content */
             margin: 20px auto; 
-            max-width: 100%;
+            max-width: 90%; /* Adjust to ensure it fits in smaller screens */
             border-radius: 10px;
             opacity: 0;
             transform: translateY(20px);
@@ -67,6 +67,7 @@
             .content {
                 padding: 10px; 
                 margin: 10px; 
+                max-width: 100%; /* Full width on smaller screens */
             }
 
             h1 {
@@ -135,6 +136,31 @@
             padding: 10px;
         }
 
+        button {
+            background-color: #000; /* Black background for buttons */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555; /* Dark grey on hover */
+        }
+
+        a.btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000; /* Black background for buttons */
+            color: #fff; /* White text color */
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a.btn:hover {
+            background-color: #555; /* Dark grey on hover */
+        }
     </style>
 </head>
 <body>
@@ -183,7 +209,7 @@
                 
                 <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
             </div>
-            <a href="#about" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 5px;">Learn More</a>
+            <a href="#about" class="btn">Learn More</a>
         </section>
         <article id="about" class="content">
             <h2>About Me</h2>
@@ -202,16 +228,15 @@
             <div>Email: <a href="mailto:sowjankumarjeejula@gmail.com" style="color: #fff;">sowjankumarjeejula@gmail.com</a></div>
             <div>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/" style="color: #fff;">Sowjan Kumar Jeejula</a></div>
             <div>GitHub: <a href="https://github.com/Sowjan1580" style="color: #fff;">Sowjan1580</a></div>
-            <button onclick="window.location.href='index2.html'" style="background-color: #000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Next</button>
+            <button onclick="window.location.href='index2.html'">Next</button>
         </article>
     </main>
-
     <script>
         function fadeInOnScroll() {
             const sections = document.querySelectorAll('.content');
             const windowHeight = window.innerHeight;
-            const offset = 200; // Offset for triggering fade-in
-
+            const offset = 100; // Adjust based on preference
+            
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 const isVisible = sectionTop < windowHeight - offset;
