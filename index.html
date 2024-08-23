@@ -40,8 +40,13 @@
             padding: 20px;
         }
 
-        #hero, #about, #myskills, #contact, .journey {
-            background-color: #000; /* Black background for specified sections */
+        .content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 10px;
+            text-align: left;
             opacity: 0; /* Start as invisible */
             transition: opacity 1s ease-in-out; /* Fade-in transition */
         }
@@ -60,15 +65,6 @@
 
         #contact {
             background-color: #43a047; /* Fresh green for the contact section */
-        }
-
-        .content {
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-            margin: 20px auto;
-            max-width: 90%;
-            border-radius: 10px;
-            text-align: left;
         }
 
         .scrolling-wrapper {
@@ -120,11 +116,6 @@
         }
 
         @media screen and (max-width: 768px) {
-            .parallax {
-                background-attachment: scroll;
-                height: 200px;
-            }
-
             .content {
                 padding: 10px;
                 margin: 10px;
@@ -140,6 +131,10 @@
 
             p {
                 font-size: 1em;
+            }
+
+            .scrolling-wrapper img {
+                height: 100px; /* Adjust image height for smaller screens */
             }
         }
     </style>
@@ -231,6 +226,8 @@
 
                     if (scrollPosition > sectionTop + sectionHeight / 3) {
                         section.style.opacity = 1;
+                    } else {
+                        section.style.opacity = 0;
                     }
                 });
             }
