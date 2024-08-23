@@ -13,6 +13,8 @@
       color: #fff;
       background-color: #000;
       overflow-x: hidden;
+      opacity: 0; /* Initially hide the entire page */
+      transition: opacity 1s ease-in-out; /* Fade-in effect */
     }
 
     header {
@@ -159,6 +161,12 @@
     </section>
   </main>
   <script>
+    // Function to fade in the content on page load
+    function fadeInPage() {
+      document.body.style.opacity = 1;
+    }
+
+    // Function to handle fade in on scroll
     function fadeInOnScroll() {
       const sections = document.querySelectorAll('.content');
       const windowHeight = window.innerHeight;
@@ -171,14 +179,18 @@
           section.style.opacity = 1;
           section.style.transform = 'translateY(0)';
         } else {
-          section.style.opacity = 1;  // Changed from 0 to 1
+          section.style.opacity = 1;  // Ensure opacity is 1 to prevent fade out
           section.style.transform = 'translateY(0)';
         }
       });
     }
 
+    // Add event listeners for fade in effects
     window.addEventListener('scroll', debounce(fadeInOnScroll, 50));
-    window.addEventListener('load', fadeInOnScroll);
+    window.addEventListener('load', () => {
+      fadeInPage();
+      fadeInOnScroll(); // Ensure fade-in effect on initial load
+    });
 
     function debounce(func, wait) {
       let timeout;
