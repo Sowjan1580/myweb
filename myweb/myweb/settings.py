@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w#k5wj9xfdz+^*&klbvzg0aiv%x&-*yithrjz5)s5h(9nrnh#%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sowjanjeejula.com','https://sowjan1580.github.io/myweb/']
+ALLOWED_HOSTS = ['https://sowjan1580.github.io/myweb/']
 
 
 # Application definition
@@ -130,7 +130,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',  # your app name
 ]
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]',https://sowjan1580.github.io/myweb/s]
 DEBUG=True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ROOT_URLCONF = 'myweb.urls'
