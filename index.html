@@ -9,13 +9,13 @@
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff; /* White text color */
-            background-color: #333; /* Dark grey background color */
+            color: #333; /* Dark text color */
+            background-color: #f4f4f4; /* Light grey background color */
             overflow-x: hidden;
         }
 
         header {
-            background-color: #000; /* Black background for header */
+            background-color: #333; /* Dark grey background for header */
             padding: 10px;
             color: #fff; /* White text color */
         }
@@ -43,14 +43,15 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-color: #000; /* Default color for background if image is not loaded */
+            background-color: #000; /* Black background as fallback */
         }
 
         .content {
             padding: 5%;
-            background-color: #444; /* Dark grey background for content */
+            background-color: #fff; /* White background for content */
+            color: #333; /* Dark text color */
             margin: 20px auto; 
-            max-width: 90%; /* Adjust to ensure it fits in smaller screens */
+            max-width: 90%; 
             border-radius: 10px;
             opacity: 0;
             transform: translateY(20px);
@@ -112,31 +113,27 @@
             scrollbar-width: none;
         }
 
-        /* Additional Section Backgrounds */
         #hero {
-            background-color: #000; /* Black background for hero section */
-            color: #fff; /* White text color */
+            background-color: #f4f4f4; /* Light grey background for hero section */
         }
 
         .journey {
-            background-color: #444; /* Dark grey background */
-            color: #fff; /* White text color */
+            background-color: #fff; /* White background for journey section */
         }
 
         #about, #myskills, #contact {
-            background-color: #333; /* Dark grey background */
-            color: #fff; /* White text color */
+            background-color: #f4f4f4; /* Light grey background for these sections */
         }
 
         footer {
-            background-color: #000; /* Black background for footer */
+            background-color: #333; /* Dark grey background for footer */
             color: #fff; /* White text color */
             text-align: center;
             padding: 10px;
         }
 
         button {
-            background-color: #000; /* Black background for buttons */
+            background-color: #333; /* Dark grey background for buttons */
             color: #fff; /* White text color */
             padding: 10px 20px;
             border: none;
@@ -145,20 +142,20 @@
         }
 
         button:hover {
-            background-color: #555; /* Dark grey on hover */
+            background-color: #555; /* Darker grey on hover */
         }
 
         a.btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #000; /* Black background for buttons */
+            background-color: #333; /* Dark grey background for buttons */
             color: #fff; /* White text color */
             text-decoration: none;
             border-radius: 5px;
         }
 
         a.btn:hover {
-            background-color: #555; /* Dark grey on hover */
+            background-color: #555; /* Darker grey on hover */
         }
     </style>
 </head>
@@ -224,9 +221,9 @@
         <article id="contact" class="content">
             <h2>Contact Me</h2>
             <p>Get in touch with me through:</p>
-            <div>Email: <a href="mailto:sowjankumarjeejula@gmail.com" style="color: #fff;">sowjankumarjeejula@gmail.com</a></div>
-            <div>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/" style="color: #fff;">Sowjan Kumar Jeejula</a></div>
-            <div>GitHub: <a href="https://github.com/Sowjan1580" style="color: #fff;">Sowjan1580</a></div>
+            <div>Email: <a href="mailto:sowjankumarjeejula@gmail.com">sowjankumarjeejula@gmail.com</a></div>
+            <div>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/">Sowjan Kumar Jeejula</a></div>
+            <div>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></div>
             <button onclick="window.location.href='index2.html'">Next</button>
         </article>
     </main>
