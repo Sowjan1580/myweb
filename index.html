@@ -9,8 +9,8 @@
             height: 100%;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #000;
-            background-color: #fff; /* Set background color to white */
+            color: #fff; /* White text color */
+            background-color: #333; /* Dark grey background color */
             overflow-x: hidden;
         }
 
@@ -48,7 +48,7 @@
 
         .content {
             padding: 5%;
-            background-color: #f8f8f8; /* Light grey background */
+            background-color: #444; /* Dark grey background for content */
             margin: 20px auto; 
             max-width: 100%;
             border-radius: 10px;
@@ -119,13 +119,13 @@
         }
 
         .journey {
-            background-color: #f8f8f8; /* Light grey background */
-            color: #000; /* Black text color */
+            background-color: #444; /* Dark grey background */
+            color: #fff; /* White text color */
         }
 
         #about, #myskills, #contact {
-            background-color: #fff; /* White background */
-            color: #000; /* Black text color */
+            background-color: #333; /* Dark grey background */
+            color: #fff; /* White text color */
         }
 
         footer {
@@ -157,7 +157,7 @@
                 <img src="blackbox.jfif" alt="Image 3">
                 <img src="chatgpt.jfif" alt="Image 4">
                 <img src="copilot.jfif" alt="Image 5">
-                <img src="gpt.jfif" alt="Image 5">
+                <img src="gpt.jfif" alt="Image 6">
             </div>
             <div class="journey">
                 <h2>The Journey:</h2>
@@ -183,7 +183,7 @@
                 
                 <p>Future Enhancements: My journey doesn’t end here. I’m excited to explore new ways to enhance user engagement. Perhaps integrating more AI capabilities or experimenting with novel interaction paradigms!</p>
             </div>
-            <a href="#about" class="btn">Learn More</a>
+            <a href="#about" class="btn" style="display: inline-block; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 5px;">Learn More</a>
         </section>
         <article id="about" class="content">
             <h2>About Me</h2>
@@ -199,10 +199,10 @@
         <article id="contact" class="content">
             <h2>Contact Me</h2>
             <p>Get in touch with me through:</p>
-            <div>Email: <a href="mailto:sowjankumarjeejula@gmail.com">sowjankumarjeejula@gmail.com</a></div>
-            <div>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/">Sowjan Kumar Jeejula</a></div>
-            <div>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></div>
-            <button onclick="window.location.href='index2.html'">Next</button>
+            <div>Email: <a href="mailto:sowjankumarjeejula@gmail.com" style="color: #fff;">sowjankumarjeejula@gmail.com</a></div>
+            <div>LinkedIn: <a href="https://www.linkedin.com/in/sowjan-kumar-jeejula-94658920b/" style="color: #fff;">Sowjan Kumar Jeejula</a></div>
+            <div>GitHub: <a href="https://github.com/Sowjan1580" style="color: #fff;">Sowjan1580</a></div>
+            <button onclick="window.location.href='index2.html'" style="background-color: #000; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Next</button>
         </article>
     </main>
 
@@ -214,15 +214,19 @@
 
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < windowHeight - offset) {
+                const isVisible = sectionTop < windowHeight - offset;
+                if (isVisible) {
                     section.style.opacity = 1;
                     section.style.transform = 'translateY(0)';
+                } else {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
                 }
             });
         }
 
         window.addEventListener('scroll', fadeInOnScroll);
-        fadeInOnScroll(); // Initial check
+        window.addEventListener('load', fadeInOnScroll); // Ensure fade-in effect on initial load
     </script>
 </body>
 </html>
