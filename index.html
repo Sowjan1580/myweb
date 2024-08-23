@@ -10,12 +10,12 @@
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
-            background-color: #2e2e2e; /* Dark grey background for the whole page */
+            background-color: #1a1a1a; /* Dark grey background for the whole page */
             overflow-x: hidden;
         }
 
         header {
-            background-color: #1e1e1e; /* Very dark grey for the header */
+            background-color: #111; /* Very dark grey for the header */
             padding: 10px;
         }
 
@@ -40,8 +40,12 @@
             padding: 20px;
         }
 
+        #hero, #about, #myskills, #contact, .journey {
+            background-color: #000; /* Black background for specified sections */
+        }
+
         #hero {
-            background-color: #ff6f61; /* Vibrant coral background for the hero section */
+            background-color: #ff6f61; /* Vibrant coral for the hero section */
         }
 
         #about {
@@ -58,7 +62,7 @@
 
         .content {
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
             margin: 20px auto;
             max-width: 90%;
             border-radius: 10px;
@@ -211,15 +215,5 @@
             <button onclick="window.location.href='index2.html'">Next</button>
         </article>
     </main>
-
-    <script>
-        // JavaScript to dynamically change the background color of the sections
-        const sections = document.querySelectorAll('section, article');
-        const colors = ['#ff6f61', '#6a1b9a', '#1e88e5', '#43a047']; // Array of attractive colors
-
-        sections.forEach((section, index) => {
-            section.style.backgroundColor = colors[index % colors.length];
-        });
-    </script>
 </body>
 </html>
