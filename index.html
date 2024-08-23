@@ -87,7 +87,7 @@
       overflow-x: auto;
       white-space: nowrap;
       margin: 20px 0;
-      border: 1px solid #444; /* Border for the scrolling-wrapper */
+      border: 1px solid #444;
       padding: 10px;
     }
 
@@ -95,7 +95,7 @@
       width: 300px;
       margin-right: 10px;
       flex-shrink: 0;
-      border: 1px solid #444; /* Border for images */
+      border: 1px solid #444;
     }
 
     .scrolling-wrapper::-webkit-scrollbar {
@@ -109,7 +109,7 @@
 
     #hero, .journey, #about, #myskills, #contact {
       background-color: #222;
-      border: 1px solid #444; /* Border for sections */
+      border: 1px solid #444;
     }
 
     footer {
@@ -169,7 +169,7 @@
         <img src="copilot.jfif" alt="Image of Copilot">
         <img src="gpt.jfif" alt="Image of GPT">
       </div>
-      <div class="journey">
+      <div class="journey content">
         <h2>The Journey:</h2>
         <h3>Conceptualization</h3>
         <p>I envisioned a platform where AI could dynamically generate content. The idea was to create a dynamic webpage that adapts to user interactions.</p>
@@ -216,7 +216,7 @@
     function fadeInOnScroll() {
       const sections = document.querySelectorAll('.content');
       const windowHeight = window.innerHeight;
-      const offset = 100; // Adjust based on preference
+      const offset = 100;
 
       sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top;
@@ -232,9 +232,8 @@
     }
 
     window.addEventListener('scroll', debounce(fadeInOnScroll, 50));
-    window.addEventListener('load', fadeInOnScroll); // Ensure fade-in effect on initial load
+    window.addEventListener('load', fadeInOnScroll);
 
-    // Debounce function to limit how often fadeInOnScroll is called
     function debounce(func, wait) {
       let timeout;
       return function(...args) {
