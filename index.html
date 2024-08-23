@@ -5,6 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style>
+       body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% transparent black background */
+    overflow-x: hidden;
+}
+
+        .parallax {
+    background-image: url('https://www.state.gov/wp-content/uploads/2021/06/AI-Motherboard-scaled.jpg');
+    height: 300px; /* Reduce height for mobile */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+        .content {
+    padding: 5%; /* Use percentage for padding */
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 20px auto; /* Center content with auto margins */
+    max-width: 100%; /* Ensure content does not exceed screen width */
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: left;
+}
+        @media screen and (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Disable parallax effect on mobile */
+        height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .content {
+        padding: 10px; /* Reduce padding on smaller screens */
+        margin: 10px; /* Adjust margin */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce font size for headers */
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .options button {
+        font-size: 1em; /* Adjust button size */
+        padding: 10px 20px;
+    }
+
+    .result {
+        font-size: 1.2em;
+    }
+}
         .scrolling-wrapper {
             display: flex;
             overflow-x: auto;
