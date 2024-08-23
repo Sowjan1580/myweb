@@ -10,12 +10,12 @@
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
-            background-color: #333; /* Default dark background */
+            background-color: #2e2e2e; /* Dark grey background for the whole page */
             overflow-x: hidden;
         }
 
         header {
-            background-color: #444; /* Dark grey background for the header */
+            background-color: #1e1e1e; /* Very dark grey for the header */
             padding: 10px;
         }
 
@@ -33,7 +33,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #fff;
+            color: #f1f1f1; /* Light grey for links */
         }
 
         main {
@@ -41,19 +41,19 @@
         }
 
         #hero {
-            background-color: #222; /* Very dark background for the hero section */
+            background-color: #ff6f61; /* Vibrant coral background for the hero section */
         }
 
         #about {
-            background-color: #555; /* Medium grey for the about section */
+            background-color: #6a1b9a; /* Deep purple for the about section */
         }
 
         #myskills {
-            background-color: #444; /* Slightly lighter grey for the skills section */
+            background-color: #1e88e5; /* Bright blue for the skills section */
         }
 
         #contact {
-            background-color: #666; /* Light grey for the contact section */
+            background-color: #43a047; /* Fresh green for the contact section */
         }
 
         .content {
@@ -103,14 +103,14 @@
         a.btn {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #007bff; /* Blue background for buttons */
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
         }
 
         a.btn:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Darker blue on hover */
         }
 
         @media screen and (max-width: 768px) {
@@ -215,7 +215,7 @@
     <script>
         // JavaScript to dynamically change the background color of the sections
         const sections = document.querySelectorAll('section, article');
-        const colors = ['#222', '#555', '#444', '#666']; // Array of colors for each section
+        const colors = ['#ff6f61', '#6a1b9a', '#1e88e5', '#43a047']; // Array of attractive colors
 
         sections.forEach((section, index) => {
             section.style.backgroundColor = colors[index % colors.length];
