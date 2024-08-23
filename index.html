@@ -42,6 +42,11 @@
             text-align: justify; /* Justify text */
             max-width: 800px; /* Optional: sets a maximum width for readability */
             width: 100%;
+            opacity: 0; /* Initially hidden for fade-in effect */
+            transition: opacity 1s ease-in; /* Smooth transition for fade-in */
+        }
+        .fade-in {
+            opacity: 1; /* Makes the content visible */
         }
         p {
             margin: 0 0 20px 0;
@@ -83,6 +88,20 @@
         }
         .journey ul li {
             margin: 5px 0;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .bounce {
+            animation: bounce 1s;
         }
     </style>
 </head>
@@ -127,6 +146,9 @@
             </div>
             
             <a href="#about" class="btn">Learn More</a>
+            <br><br>
+            <button id="fadeButton">Fade In Content</button>
+            <button id="bounceButton">Bounce Header</button>
         </section>
         <article id="about" class="content">
             <h2>About Me</h2>
@@ -147,6 +169,40 @@
             <div>GitHub: <a href="https://github.com/Sowjan1580">Sowjan1580</a></div>
         </article>
     </main>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const contents = document.querySelectorAll('.content');
+            const fadeButton = document.getElementById('fadeButton');
+            const bounceButton = document.getElementById('bounceButton');
+            const header = document.querySelector('header');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            contents.forEach(content => {
+                observer.observe(content);
+            });
+
+            fadeButton.addEventListener('click', () => {
+                contents.forEach(content => {
+                    content.classList.add('fade-in');
+                });
+            });
+
+            bounceButton.addEventListener('click', () => {
+                header.classList.add('bounce');
+                setTimeout(() => {
+                    header.classList.remove('bounce');
+                }, 1000);
+            });
+        });
+    </script>
 </body>
 </html>
