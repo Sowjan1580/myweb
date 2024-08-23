@@ -1,0 +1,103 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #ffffff; /* White text for contrast on black background */
+    background-color: #000000; /* Black background */
+}
+
+/* Header and navigation styles */
+header {
+    background-color: #1c1c1c; /* Dark grey background for header */
+    color: #ffffff; /* White text */
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center nav items horizontally */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text for links */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffb6c1; /* Light pink on hover */
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Hero section styles */
+#hero {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 2px solid #ffffff; /* White border */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* About Me to Contact section styles */
+#about, #myskills, #contact {
+    background-color: #ffb6c1; /* Light pink background */
+    color: #000000; /* Black text */
+    padding: 20px;
+    border: 2px solid #000000; /* Black border */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 40px;
+}
+
+/* Skills section styles */
+#myskills div {
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Slightly larger text for skills */
+}
+
+/* Contact section styles */
+#contact div {
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0033cc; /* Blue background for buttons */
+    color: #ffffff; /* White text for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #0033cc; /* Blue border */
+}
+
+a.btn:hover {
+    background-color: #ffb6c1; /* Light pink background on hover */
+    color: #ffffff; /* White text on hover */
+    border-color: #ffb6c1; /* Light pink border on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
